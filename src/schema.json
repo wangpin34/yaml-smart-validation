@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "[abc]+",
+      "maxLength": 15
+    },
+    "version": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string"}
+    },
+    "private": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "age": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "version"
+  ]
+}
